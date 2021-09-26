@@ -39,7 +39,14 @@ NOTA: Si se tienen muchos tipos de un solo componente es señal de desorden, hay
 **Estrategias de render**: Virtual DOM y No Virtual DOM. Ninguna es mejor, depende del caso en particular.
 
 Componente -> Estado -> Render -> Usuario (y vuelve a “Estado”)
-# 
+# Librería vs Frameworks
+## Framework
+
+Es un conjunto de piezas de codigo que se centra en la elaboración o construción todo un proyecto a través de un conjunto de herramientas que nos brinda el framework (puede incluir librerías) como si de una receta se tratase.
+
+## Librería
+
+Es una porción o pieza de codigo que nos ayuda a resolver un problema en específico como trabajar con HTMLmediaElement (video o audio) por ejemplo.
 
 # Ecosistema de frameworks y librerías JavaScript
 Existen empaquetadores que nos ayudan a tener todos los archivos en produccion pero al momento de mandar al navegador sea lo mas ligero posible
