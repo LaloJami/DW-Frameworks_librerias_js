@@ -197,8 +197,11 @@ Svelte es muy bueno para hacer sitios web donde lo importante es el contenido qu
 
 No es muy bueno en aplicaciones web donde lo más importante es la interacción intensiva con los usuarios.
 
-Arquitectura Svelte
+## Arquitectura Svelte
 
 Es un compilador, y como cualquier compilador necesita generar un AST(una representación de todo el código de nuestros componentes) en forma de árbol; Para está compilación necesita tres parse, uno para el HTML, otro para JS y el otro para CSS, combina estos 3 árboles y obtiene toda la información que necesita de nuestros componentes.
 
 Envuelve todo el código de cada componente en fragments, una interfaz de API del navegador que nos sirve para encapsular nodos y pedazos del DOM, sin afectar la interfaz de la página. Los fragments no se transforman en algo que los usuarios puedan ver, o en algo que afecte el contenido o estilos de nuestra página. Es como un nodo imaginario.
+
+# CSS-in-JS
+CSS-in-JS es una técnica de diseño en la que se usa JavaScript para diseñar componentes. Cuando se analiza este JavaScript, se genera CSS y se adjunta al DOM. Permite abstraer CSS al nivel de componente en sí, usando JavaScript para describir estilos de una manera declarativa y mantenible.
