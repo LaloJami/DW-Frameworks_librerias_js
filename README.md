@@ -186,3 +186,19 @@ En pocas palabras, al principio Vue nos deja trabajar al principio casi como si 
 Nos deja trabajar con componentes pero no es obligatorio en un inicio.
 
 “El mejor performance”
+# ¿Qué es Svelte y cómo se construyó?
+Su principal característica es que no crea intermediarios entre el código escrito en Svelte y el DOM.
+
+Usa el tiempo de compilación en la etapa de desarrollo mientras nosotros estamos desarrollando para que el código compilado sea el código ideal que necesita el DOM para renderizarse y actualizarse.
+
+No usa el Virtual DOM
+
+Svelte es muy bueno para hacer sitios web donde lo importante es el contenido que vamos a mostrar.
+
+No es muy bueno en aplicaciones web donde lo más importante es la interacción intensiva con los usuarios.
+
+Arquitectura Svelte
+
+Es un compilador, y como cualquier compilador necesita generar un AST(una representación de todo el código de nuestros componentes) en forma de árbol; Para está compilación necesita tres parse, uno para el HTML, otro para JS y el otro para CSS, combina estos 3 árboles y obtiene toda la información que necesita de nuestros componentes.
+
+Envuelve todo el código de cada componente en fragments, una interfaz de API del navegador que nos sirve para encapsular nodos y pedazos del DOM, sin afectar la interfaz de la página. Los fragments no se transforman en algo que los usuarios puedan ver, o en algo que afecte el contenido o estilos de nuestra página. Es como un nodo imaginario.
