@@ -235,3 +235,78 @@ NOTA: Para esto se necesita Node.js.
 ## Generación de Sitios Estáticos
 
 Estos generadores nos permiten usar el Progressive SSR mientras estamos desarrollando el sitio, pero cuando lo compilamos nos generan páginas estáticas que ya tienen cargados los datos que normalmente le pediríamos al backend y cuando hacemos deploy las aplicaciones funcionan de una. Si hay algún dato que nos daba el servidor pero que sabemos que casi no va a cambiar (como un blogpost) podemos volver a hacer deploy si queremos editar el contenido no habrá problema alguno.
+
+> "*El indice de muertes en frontend developers por no querer aprender backend es muy alto*" -Juan D. C. 
+# Organización de archivos en el frontend
+
+Hay herramientas para el manejo del estado que nos ayudan a evitar a tener codigo espaguetti. Esto se le llama Deuda tecnica, por que en el futuro tendremos problemas en el futuro. Nos demoraremos un poco mas pero siempre es bueno tener una buena organizacion.
+
+Se divide entre **logico** vs **interfaz**. Es bueno tener una capa de UI y otra una capa de Datos. En react es bueno dividir todo entre componentes contenedores y presentacional.
+
+## File Type First
+
+Tipo de organizacion donde cada tipo de archivo.Una de componentes, una de contenedores, otra para rutas.
+```
+/components
+-MenuComponent.js
+-FormComponent.js
+
+/containers
+-MenuContainer.js
+-FormContainer.js
+
+/routes
+-HomeRoute.js
+-AboutRoute.js
+```
+## Feature First
+
+donde cada componente de nuestra aplicacion es dividir una carpeta para cada elemento que tengamos. Una carpeta de Menu, una carpeta de Form, una carpeta de Button. Esta forma es buena ya que cada carpeta sera independiente y no sera tan difiicil de entender.
+```
+/Menu
+-MenuComponent.js
+-FormComponent.js
+
+/Form
+-FormUI.js
+-FormLogic.js
+
+/Button
+-Button.js
+-Button.styles.js
+```
+## Apps For Apps
+
+Una carpeta para cada aplicacion
+```
+/StudentPlatform
+-/components
+-/containers
+
+/BusinessPlatform
+-/Form
+-/Button
+
+/SalesLanding
+-/html
+-/css
+-/js
+```
+### Bonus, forma de organizar archivos en un proyecto hecho en vue
+```
+/assets
+-/css
+-/fonts
+-/img
+/components
+-/HeaderBar
+-/FooterBar
+-BaseLoading.vue
+/layout
+/plugins
+/router
+/utils
+/views
+
+```
+> revisa el codigo [aquí](https://github.com/baumannzone/diablo3-vue-platzi)
